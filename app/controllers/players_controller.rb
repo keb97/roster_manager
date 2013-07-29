@@ -19,6 +19,17 @@ class PlayersController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
+  def update
+    if @player.update_attributes(params[:player])
+      flash[:notice] = "Player has been updated."
+      redirect_to [@club, @player]
+    else
+      #rien
+    end
+  end
 
   private
     def find_club
