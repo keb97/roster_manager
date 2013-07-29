@@ -21,4 +21,15 @@ class ClubsController < ApplicationController
     @club = Club.find(params[:id])
   end
 
+  def edit
+    @club = Club.find(params[:id])
+  end
+
+  def update
+    @club = Club.find(params[:id])
+    @club.update_attributes(params[:club])
+    flash[:notice] = "Club has been updated."
+    redirect_to @club
+  end
+
 end
