@@ -32,4 +32,11 @@ class ClubsController < ApplicationController
     redirect_to @club
   end
 
+  def destroy
+    @club = Club.find(params[:id])
+    @club.destroy
+    flash[:notice] = "Club has been deleted."
+    redirect_to clubs_path
+  end
+
 end

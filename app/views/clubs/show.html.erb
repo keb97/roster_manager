@@ -1,4 +1,9 @@
 <h2><%= @club.name %></h2>
 <%= link_to "Clubs", clubs_path %>
 <%= link_to "Edit Club", edit_club_path(@club) %>
+<%= link_to "Delete Club",
+  club_path(@club),
+  :method => :delete,
+  :confirm => "Are you sure you want to delete this club?" %>
+
 
