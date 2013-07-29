@@ -1,0 +1,11 @@
+<%= form_for(@club) do |f| %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %><br />
+  </p>
+  <p>
+    <%= f.label :league %><br />
+    <%= f.text_field :league %>
+  </p>
+<%= f.submit %>
+<% end %>
