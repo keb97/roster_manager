@@ -4,3 +4,5 @@
   <h3><%# @player.nation %></h3>
 </div>
 <%= link_to "Edit Player", [:edit, @club, @player] %>
+<%= link_to "Delete Player", [@club, @player], :method => :delete,
+  :confirm => "Are you sure you want to delete this player?" %>

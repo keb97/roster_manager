@@ -31,6 +31,12 @@ class PlayersController < ApplicationController
     end
   end
 
+  def destroy
+    @player.destroy
+    flash[:notice] = "Player has been deleted."
+    redirect_to @club
+  end
+
   private
     def find_club
       @club = Club.find(params[:club_id])
