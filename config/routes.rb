@@ -1,6 +1,8 @@
 RosterManager::Application.routes.draw do
   root :to => "clubs#index"
-  resources :clubs
+  resources :clubs do
+    resources :players
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

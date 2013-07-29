@@ -1,0 +1,11 @@
+<%= form_for [@club, @player] do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :club %><br>
+     <%= f.collection_select :club_id, Club.find(:all), :id, :name, :prompt => "Select a club" %>
+  </p>
+  <%= f.submit %>
+<% end %>
